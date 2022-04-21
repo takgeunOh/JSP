@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>jsp_ch01_day01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <!--실제 서블릿이 있는 위치  -->
+  	<servlet-name>saram-list</servlet-name>
+  	<servlet-class>org.comstudy21.saram.SaramListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saram-list</servlet-name>
+  	<url-pattern>/list.saram</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>saram-input</servlet-name>
+  	<servlet-class>org.comstudy21.saram.SaramInputController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saram-input</servlet-name>
+  	<url-pattern>/input.saram</url-pattern>
+  </servlet-mapping>
+</web-app>
